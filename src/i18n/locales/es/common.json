@@ -1,0 +1,44 @@
+{
+  "navbar": {
+    "home": "Inicio",
+    "menu": "Carta",
+    "reservations": "Reservas",
+    "gallery": "Galería",
+    "reviews": "Opiniones",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "title": "Cocina tradicional en el corazón de Granada",
+    "subtitle": "Disfruta de los sabores auténticos de Andalucía en un ambiente único",
+    "viewMenu": "Ver la carta"
+  },
+  "reservations": {
+    "title": "Reservas",
+    "subtitle": "Reserve su mesa y disfrute de una experiencia gastronómica única",
+    "button": "Reservar Mesa",
+    "whatsapp": "Reservar por WhatsApp",
+    "phone": "Llamar para Reservar"
+  },
+  "gallery": {
+    "title": "Galería",
+    "subtitle": "Descubre la belleza de nuestro restaurante y nuestros platos"
+  },
+  "reviews": {
+    "title": "Opiniones",
+    "subtitle": "Lo que dicen nuestros clientes"
+  },
+  "contact": {
+    "title": "Contacto",
+    "subtitle": "Visítanos en el corazón de Granada",
+    "address": "Calle del Sacramento, 15, Granada",
+    "phone": "+34 958 123 456",
+    "email": "info@lasacristiagranada.com",
+    "hours": "Horarios",
+    "hoursDetail": "Martes a Domingo: 13:00-16:00, 20:00-24:00"
+  },
+  "footer": {
+    "rights": "© 2024 La Sacristía. Todos los derechos reservados.",
+    "followUs": "Síguenos",
+    "location": "Ubicación"
+  }
+}

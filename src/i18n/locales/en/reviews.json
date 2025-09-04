@@ -1,0 +1,28 @@
+{
+  "reviews": [
+    {
+      "name": "María González",
+      "rating": 5,
+      "comment": "An exceptional gastronomic experience. The authentic flavors of Granada in every dish. The honey lamb is spectacular and the service is impeccable.",
+      "date": "2 weeks ago"
+    },
+    {
+      "name": "Carlos Rodríguez",
+      "rating": 5,
+      "comment": "Cozy atmosphere and delicious food. The seafood paella was perfect and the pionono dessert is the best I've ever had. Totally recommended.",
+      "date": "1 month ago"
+    },
+    {
+      "name": "Ana Martín",
+      "rating": 4,
+      "comment": "Charming restaurant in the heart of Granada. The eggplant with honey is a delight and the oxtail melts in your mouth. We will definitely return.",
+      "date": "3 weeks ago"
+    },
+    {
+      "name": "David López",
+      "rating": 5,
+      "comment": "High quality traditional Andalusian cuisine. The Iberian ham is exquisite and the salt-crusted sea bass perfectly executed. A special place for important occasions.",
+      "date": "1 week ago"
+    }
+  ]
+}

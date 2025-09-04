@@ -1,0 +1,28 @@
+{
+  "reviews": [
+    {
+      "name": "María González",
+      "rating": 5,
+      "comment": "Una experiencia gastronómica excepcional. Los sabores auténticos de Granada en cada plato. El cordero a la miel es espectacular y el servicio es impecable.",
+      "date": "Hace 2 semanas"
+    },
+    {
+      "name": "Carlos Rodríguez",
+      "rating": 5,
+      "comment": "Ambiente acogedor y comida deliciosa. La paella de mariscos estaba perfecta y el pionono de postre es el mejor que he probado. Totalmente recomendable.",
+      "date": "Hace 1 mes"
+    },
+    {
+      "name": "Ana Martín",
+      "rating": 4,
+      "comment": "Restaurante con encanto en pleno centro de Granada. La berenjenas con miel son una delicia y el rabo de toro se deshace en la boca. Volveremos sin duda.",
+      "date": "Hace 3 semanas"
+    },
+    {
+      "name": "David López",
+      "rating": 5,
+      "comment": "Cocina tradicional andaluza de alta calidad. El jamón ibérico es exquisito y la lubina a la sal perfectamente ejecutada. Un lugar especial para ocasiones importantes.",
+      "date": "Hace 1 semana"
+    }
+  ]
+}

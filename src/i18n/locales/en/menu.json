@@ -1,0 +1,79 @@
+{
+  "title": "Our Menu",
+  "categories": {
+    "starters": "Starters",
+    "meats": "Meats",
+    "fish": "Fish",
+    "desserts": "Desserts"
+  },
+  "items": {
+    "starters": [
+      {
+        "name": "Acorn-fed Iberian Ham",
+        "description": "Selection of acorn-fed Iberian ham, hand-carved",
+        "price": "18€"
+      },
+      {
+        "name": "Andalusian Gazpacho",
+        "description": "Traditional gazpacho with tomato, cucumber, pepper and extra virgin olive oil",
+        "price": "8€"
+      },
+      {
+        "name": "Eggplant with Honey",
+        "description": "Fried eggplant with Granada sugar cane honey",
+        "price": "9€"
+      }
+    ],
+    "meats": [
+      {
+        "name": "Lamb with Honey",
+        "description": "Roasted milk-fed lamb leg with honey and Moorish spices",
+        "price": "24€"
+      },
+      {
+        "name": "Oxtail Stew",
+        "description": "Oxtail braised with Montilla-Moriles wine",
+        "price": "22€"
+      },
+      {
+        "name": "Iberian Secret",
+        "description": "Grilled Iberian pork with Pedro Ximénez sauce",
+        "price": "20€"
+      }
+    ],
+    "fish": [
+      {
+        "name": "Salt-Crusted Sea Bass",
+        "description": "Fresh sea bass cooked in sea salt crust",
+        "price": "26€"
+      },
+      {
+        "name": "Cod with Tomato",
+        "description": "Confited cod with natural tomato and olives",
+        "price": "19€"
+      },
+      {
+        "name": "Seafood Paella",
+        "description": "Traditional paella with prawns, mussels and squid",
+        "price": "28€"
+      }
+    ],
+    "desserts": [
+      {
+        "name": "Pionono de Santa Fe",
+        "description": "Traditional Granada sweet with toasted cream",
+        "price": "7€"
+      },
+      {
+        "name": "Grandma's French Toast",
+        "description": "Homemade French toast with honey and cinnamon",
+        "price": "6€"
+      },
+      {
+        "name": "Fried Milk",
+        "description": "Traditional dessert with cinnamon and sugar",
+        "price": "6€"
+      }
+    ]
+  }
+}

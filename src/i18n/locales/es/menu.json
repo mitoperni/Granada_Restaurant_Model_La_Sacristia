@@ -1,0 +1,79 @@
+{
+  "title": "Nuestra Carta",
+  "categories": {
+    "starters": "Entrantes",
+    "meats": "Carnes",
+    "fish": "Pescados",
+    "desserts": "Postres"
+  },
+  "items": {
+    "starters": [
+      {
+        "name": "Jamón Ibérico de Bellota",
+        "description": "Selección de jamón ibérico de bellota cortado a cuchillo",
+        "price": "18€"
+      },
+      {
+        "name": "Gazpacho Andaluz",
+        "description": "Gazpacho tradicional con tomate, pepino, pimiento y aceite virgen extra",
+        "price": "8€"
+      },
+      {
+        "name": "Berenjenas con Miel",
+        "description": "Berenjenas fritas con miel de caña de Granada",
+        "price": "9€"
+      }
+    ],
+    "meats": [
+      {
+        "name": "Cordero a la Miel",
+        "description": "Pierna de cordero lechal asada con miel y especias moriscas",
+        "price": "24€"
+      },
+      {
+        "name": "Rabo de Toro",
+        "description": "Rabo de toro guisado con vino de Montilla-Moriles",
+        "price": "22€"
+      },
+      {
+        "name": "Secreto Ibérico",
+        "description": "Secreto ibérico a la plancha con salsa de Pedro Ximénez",
+        "price": "20€"
+      }
+    ],
+    "fish": [
+      {
+        "name": "Lubina a la Sal",
+        "description": "Lubina fresca cocinada en costra de sal marina",
+        "price": "26€"
+      },
+      {
+        "name": "Bacalao con Tomate",
+        "description": "Bacalao confitado con tomate natural y aceitunas",
+        "price": "19€"
+      },
+      {
+        "name": "Paella de Mariscos",
+        "description": "Paella tradicional con langostinos, mejillones y calamares",
+        "price": "28€"
+      }
+    ],
+    "desserts": [
+      {
+        "name": "Pionono de Santa Fe",
+        "description": "Dulce tradicional granadino con crema tostada",
+        "price": "7€"
+      },
+      {
+        "name": "Torrijas de la Abuela",
+        "description": "Torrijas caseras con miel y canela",
+        "price": "6€"
+      },
+      {
+        "name": "Leche Frita",
+        "description": "Postre tradicional con canela y azúcar",
+        "price": "6€"
+      }
+    ]
+  }
+}
