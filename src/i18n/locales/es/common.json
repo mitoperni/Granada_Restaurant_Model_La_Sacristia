@@ -10,7 +10,9 @@
   "hero": {
     "title": "Cocina tradicional en el corazón de Granada",
     "subtitle": "Disfruta de los sabores auténticos de Andalucía en un ambiente único",
-    "viewMenu": "Ver la carta"
+    "viewMenu": "Ver la carta",
+    "reserveButton": "Reservar una mesa",
+    "menuButton": "Ver la carta"
   },
   "reservations": {
     "title": "Reservas",

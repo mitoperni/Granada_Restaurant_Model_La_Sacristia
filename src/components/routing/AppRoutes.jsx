@@ -1,9 +1,9 @@
 import { Routes, Route } from 'react-router-dom';
 import LanguageWrapper from './LanguageWrapper';
-import HomePage from '../pages/HomePage';
-import MenuPage from '../pages/MenuPage';
-import ReservationsPage from '../pages/ReservationsPage';
-import ContactPage from '../pages/ContactPage';
+import HomePage from '../../pages/HomePage';
+import MenuPage from '../../pages/MenuPage';
+import ReservationsPage from '../../pages/ReservationsPage';
+import ContactPage from '../../pages/ContactPage';
 
 function AppRoutes() {
   return (

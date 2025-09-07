@@ -10,7 +10,9 @@
   "hero": {
     "title": "Traditional cuisine in the heart of Granada",
     "subtitle": "Enjoy the authentic flavors of Andalusia in a unique atmosphere",
-    "viewMenu": "View menu"
+    "viewMenu": "View menu",
+    "reserveButton": "Reserve a table",
+    "menuButton": "View menu"
   },
   "reservations": {
     "title": "Reservations",

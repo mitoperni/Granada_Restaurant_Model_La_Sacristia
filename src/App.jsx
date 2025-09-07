@@ -1,10 +1,10 @@
 import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter } from 'react-router-dom';
 
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import SEOManager from './components/SEOManager';
-import AppRoutes from './components/AppRoutes';
+import Navbar from './components/layout/Navbar';
+import Footer from './components/layout/Footer';
+import SEOManager from './components/layout/SEOManager';
+import AppRoutes from './components/routing/AppRoutes';
 import useScrollToTop from './hooks/useScrollToTop';
 
 import './i18n';

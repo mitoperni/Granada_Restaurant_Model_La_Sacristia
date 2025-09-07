@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useLocation } from 'react-router-dom';
-import LanguageLink from './LanguageLink';
-import { useLanguageNavigation } from '../hooks/useLanguageNavigation';
+import LanguageLink from '../ui/LanguageLink';
+import { useLanguageNavigation } from '../../hooks/useLanguageNavigation';
 
 const Navbar = () => {
   const { t, i18n } = useTranslation();

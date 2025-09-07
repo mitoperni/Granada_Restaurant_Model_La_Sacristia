@@ -40,7 +40,7 @@ const ReviewCard = ({ review }) => (
         <svg className="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
           <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
         </svg>
-        Cliente verificado
+        Verified customer
       </div>
     </div>
   </div>
@@ -75,7 +75,7 @@ const Reviews = () => {
               </span>
             </div>
             <span className="text-gray-600">
-              Basado en {Array.isArray(reviews) ? reviews.length : 0} reseñas
+              Based on {Array.isArray(reviews) ? reviews.length : 0} reviews
             </span>
           </div>
         </div>
@@ -96,7 +96,7 @@ const Reviews = () => {
             <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
               <path fillRule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" clipRule="evenodd" />
             </svg>
-            Escribir una reseña
+            Write a review
           </a>
         </div>
       </div>
