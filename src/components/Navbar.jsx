@@ -1,21 +1,24 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
+import LanguageLink from './LanguageLink';
+import { useLanguageNavigation } from '../hooks/useLanguageNavigation';
 
 const Navbar = () => {
   const { t, i18n } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
-  const navigate = useNavigate();
+  const { navigateWithLanguage, switchLanguage } = useLanguageNavigation();
 
   const toggleLanguage = () => {
     const newLang = i18n.language === 'es' ? 'en' : 'es';
-    i18n.changeLanguage(newLang);
+    switchLanguage(newLang);
   };
 
   const handleNavigation = (path, sectionId = null) => {
-    if (location.pathname !== path) {
-      navigate(path);
+    const currentBasePath = getCurrentBasePath();
+    if (currentBasePath !== path) {
+      navigateWithLanguage(path);
     } else if (sectionId) {
       const element = document.getElementById(sectionId);
       if (element) {
@@ -25,48 +28,57 @@ const Navbar = () => {
     setIsMenuOpen(false);
   };
 
+  const getCurrentBasePath = () => {
+    const path = location.pathname;
+    if (path === '/' || path === '/en') return '/';
+    if (path === '/carta' || path === '/en/menu') return '/carta';
+    if (path === '/reservas' || path === '/en/reservations') return '/reservas';
+    if (path === '/contacto' || path === '/en/contact') return '/contacto';
+    return path;
+  };
+
   return (
     <nav className="bg-white shadow-md fixed w-full top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0">
-            <Link to="/" className="text-2xl font-bold text-amber-600 hover:text-amber-700 transition-colors">
+            <LanguageLink to="/" className="text-2xl font-bold text-amber-600 hover:text-amber-700 transition-colors">
               La Sacristía
-            </Link>
+            </LanguageLink>
           </div>
           
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
-              <Link
+              <LanguageLink
                 to="/"
                 className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-                  location.pathname === '/' 
+                  getCurrentBasePath() === '/' 
                     ? 'bg-amber-100 text-amber-700' 
                     : 'text-gray-700 hover:bg-amber-50 hover:text-amber-600'
                 }`}
               >
                 {t('navbar.home')}
-              </Link>
-              <Link
+              </LanguageLink>
+              <LanguageLink
                 to="/carta"
                 className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-                  location.pathname === '/carta' 
+                  getCurrentBasePath() === '/carta' 
                     ? 'bg-amber-100 text-amber-700' 
                     : 'text-gray-700 hover:bg-amber-50 hover:text-amber-600'
                 }`}
               >
                 {t('navbar.menu')}
-              </Link>
-              <Link
+              </LanguageLink>
+              <LanguageLink
                 to="/reservas"
                 className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-                  location.pathname === '/reservas' 
+                  getCurrentBasePath() === '/reservas' 
                     ? 'bg-amber-100 text-amber-700' 
                     : 'text-gray-700 hover:bg-amber-50 hover:text-amber-600'
                 }`}
               >
                 {t('navbar.reservations')}
-              </Link>
+              </LanguageLink>
               <button
                 onClick={() => handleNavigation('/', 'gallery')}
                 className="text-gray-700 hover:bg-amber-50 hover:text-amber-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
@@ -79,16 +91,16 @@ const Navbar = () => {
               >
                 {t('navbar.reviews')}
               </button>
-              <Link
+              <LanguageLink
                 to="/contacto"
                 className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-                  location.pathname === '/contacto' 
+                  getCurrentBasePath() === '/contacto' 
                     ? 'bg-amber-100 text-amber-700' 
                     : 'text-gray-700 hover:bg-amber-50 hover:text-amber-600'
                 }`}
               >
                 {t('navbar.contact')}
-              </Link>
+              </LanguageLink>
             </div>
           </div>
 
@@ -120,39 +132,39 @@ const Navbar = () => {
       {isMenuOpen && (
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white shadow-lg">
-            <Link
+            <LanguageLink
               to="/"
               onClick={() => setIsMenuOpen(false)}
               className={`block px-3 py-2 rounded-md text-base font-medium w-full text-left transition-colors ${
-                location.pathname === '/' 
+                getCurrentBasePath() === '/' 
                   ? 'bg-amber-100 text-amber-700' 
                   : 'text-gray-700 hover:bg-amber-50 hover:text-amber-600'
               }`}
             >
               {t('navbar.home')}
-            </Link>
-            <Link
+            </LanguageLink>
+            <LanguageLink
               to="/carta"
               onClick={() => setIsMenuOpen(false)}
               className={`block px-3 py-2 rounded-md text-base font-medium w-full text-left transition-colors ${
-                location.pathname === '/carta' 
+                getCurrentBasePath() === '/carta' 
                   ? 'bg-amber-100 text-amber-700' 
                   : 'text-gray-700 hover:bg-amber-50 hover:text-amber-600'
               }`}
             >
               {t('navbar.menu')}
-            </Link>
-            <Link
+            </LanguageLink>
+            <LanguageLink
               to="/reservas"
               onClick={() => setIsMenuOpen(false)}
               className={`block px-3 py-2 rounded-md text-base font-medium w-full text-left transition-colors ${
-                location.pathname === '/reservas' 
+                getCurrentBasePath() === '/reservas' 
                   ? 'bg-amber-100 text-amber-700' 
                   : 'text-gray-700 hover:bg-amber-50 hover:text-amber-600'
               }`}
             >
               {t('navbar.reservations')}
-            </Link>
+            </LanguageLink>
             <button
               onClick={() => handleNavigation('/', 'gallery')}
               className="text-gray-700 hover:bg-amber-50 hover:text-amber-600 block px-3 py-2 rounded-md text-base font-medium w-full text-left transition-colors"
@@ -165,17 +177,17 @@ const Navbar = () => {
             >
               {t('navbar.reviews')}
             </button>
-            <Link
+            <LanguageLink
               to="/contacto"
               onClick={() => setIsMenuOpen(false)}
               className={`block px-3 py-2 rounded-md text-base font-medium w-full text-left transition-colors ${
-                location.pathname === '/contacto' 
+                getCurrentBasePath() === '/contacto' 
                   ? 'bg-amber-100 text-amber-700' 
                   : 'text-gray-700 hover:bg-amber-50 hover:text-amber-600'
               }`}
             >
               {t('navbar.contact')}
-            </Link>
+            </LanguageLink>
             <div className="px-3 py-2">
               <button
                 onClick={toggleLanguage}
