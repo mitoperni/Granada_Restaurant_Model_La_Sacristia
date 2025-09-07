@@ -60,7 +60,7 @@ const Menu = () => {
                     </div>
                     <div className="ml-4 text-right">
                       <span className="text-amber-600 font-bold text-lg">
-                        {item.price}€
+                        {item.price}
                       </span>
                     </div>
                   </div>

@@ -111,7 +111,7 @@ const Reviews = () => {
                 clipRule="evenodd"
               />
             </svg>
-            Write a review
+            {t("reviews.writeNew")}
           </a>
         </div>
       </div>

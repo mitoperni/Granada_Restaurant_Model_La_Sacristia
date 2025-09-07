@@ -27,7 +27,8 @@
   },
   "reviews": {
     "title": "Reviews",
-    "subtitle": "What our customers say"
+    "subtitle": "What our customers say",
+    "writeNew": "Write a new review"
   },
   "contact": {
     "title": "Contact",
