@@ -1,11 +1,10 @@
 import SEOHead from '../components/SEOHead';
-import Breadcrumbs from '../components/Breadcrumbs';
 import Reservations from './Reservations';
 import { useTranslation } from 'react-i18next';
 
 const ReservationsPage = () => {
   const { t } = useTranslation();
-  
+
   const reservationStructuredData = {
     "@context": "https://schema.org",
     "@type": "Restaurant",
@@ -39,15 +38,14 @@ const ReservationsPage = () => {
 
   return (
     <>
-      <SEOHead 
+      <SEOHead
         title={`La Sacristía - ${t('reservations.title')}`}
         description="Reserve su mesa en La Sacristía Granada. Reserva fácil por WhatsApp o teléfono. Cocina tradicional andaluza con ambiente único en el centro histórico."
         keywords="reservas La Sacristía Granada, reservar mesa restaurante, WhatsApp reservas, teléfono reservas, restaurante centro Granada"
         structuredData={reservationStructuredData}
       />
-      
+
       <div className="pt-16">
-        <Breadcrumbs />
         <Reservations />
       </div>
     </>

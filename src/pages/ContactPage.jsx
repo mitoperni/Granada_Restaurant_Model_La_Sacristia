@@ -1,11 +1,10 @@
 import SEOHead from '../components/SEOHead';
-import Breadcrumbs from '../components/Breadcrumbs';
 import Contact from './Contact';
 import { useTranslation } from 'react-i18next';
 
 const ContactPage = () => {
   const { t } = useTranslation();
-  
+
   const contactStructuredData = {
     "@context": "https://schema.org",
     "@type": "Restaurant",
@@ -48,15 +47,14 @@ const ContactPage = () => {
 
   return (
     <>
-      <SEOHead 
+      <SEOHead
         title={`La Sacristía - ${t('contact.title')}`}
         description="Contacta con La Sacristía Granada. Calle del Sacramento 15, centro histórico. Teléfono +34 958 123 456. Horarios, ubicación y cómo llegar."
         keywords="contacto La Sacristía Granada, dirección restaurante Granada, teléfono La Sacristía, Calle Sacramento Granada, horarios restaurante, ubicación centro Granada"
         structuredData={contactStructuredData}
       />
-      
+
       <div className="pt-16">
-        <Breadcrumbs />
         <Contact />
       </div>
     </>

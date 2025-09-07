@@ -1,11 +1,10 @@
 import SEOHead from '../components/SEOHead';
-import Breadcrumbs from '../components/Breadcrumbs';
 import Menu from './Menu';
 import { useTranslation } from 'react-i18next';
 
 const MenuPage = () => {
   const { t, i18n } = useTranslation(['common', 'menu']);
-  
+
   const menuStructuredData = {
     "@context": "https://schema.org",
     "@type": "Menu",
@@ -33,13 +32,13 @@ const MenuPage = () => {
         "description": "Entrantes tradicionales andaluces"
       },
       {
-        "@type": "MenuSection", 
+        "@type": "MenuSection",
         "name": t('menu:categories.meats'),
         "description": "Carnes selectas de la región"
       },
       {
         "@type": "MenuSection",
-        "name": t('menu:categories.fish'), 
+        "name": t('menu:categories.fish'),
         "description": "Pescados frescos del Mediterráneo"
       },
       {
@@ -52,15 +51,14 @@ const MenuPage = () => {
 
   return (
     <>
-      <SEOHead 
+      <SEOHead
         title={`La Sacristía - ${t('menu:title')}`}
         description="Descubre nuestra carta de cocina tradicional andaluza. Jamón ibérico, cordero a la miel, lubina a la sal y postres artesanales en Granada."
         keywords="carta restaurante Granada, menú andaluz, jamón ibérico, cordero miel, lubina sal, paella mariscos, pionono Santa Fe, cocina tradicional"
         structuredData={menuStructuredData}
       />
-      
+
       <div className="pt-16">
-        <Breadcrumbs />
         <Menu />
       </div>
     </>
