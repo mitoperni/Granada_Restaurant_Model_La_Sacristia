@@ -1,4 +1,4 @@
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next";
 
 const StarRating = ({ rating }) => {
   return (
@@ -7,7 +7,7 @@ const StarRating = ({ rating }) => {
         <svg
           key={star}
           className={`w-5 h-5 ${
-            star <= rating ? 'text-yellow-400' : 'text-gray-300'
+            star <= rating ? "text-yellow-400" : "text-gray-300"
           }`}
           fill="currentColor"
           viewBox="0 0 20 20"
@@ -30,15 +30,19 @@ const ReviewCard = ({ review }) => (
         <p className="text-sm text-gray-600">{review.date}</p>
       </div>
     </div>
-    
+
     <StarRating rating={review.rating} />
-    
+
     <p className="text-gray-700 leading-relaxed">{review.comment}</p>
-    
+
     <div className="mt-4 pt-4 border-t border-gray-200">
       <div className="flex items-center text-sm text-gray-500">
         <svg className="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
-          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+          <path
+            fillRule="evenodd"
+            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+            clipRule="evenodd"
+          />
         </svg>
         Verified customer
       </div>
@@ -47,26 +51,28 @@ const ReviewCard = ({ review }) => (
 );
 
 const Reviews = () => {
-  const { t } = useTranslation(['common', 'reviews']);
-  
-  const reviews = t('reviews.reviews', { returnObjects: true, ns: 'reviews' }) || [];
+  const { t } = useTranslation(["common", "reviews"]);
 
-  const averageRating = Array.isArray(reviews) && reviews.length > 0 
-    ? reviews.reduce((sum, review) => sum + review.rating, 0) / reviews.length 
-    : 0;
+  const reviews =
+    t("reviews.reviews", { returnObjects: true, ns: "reviews" }) || [];
+
+  const averageRating =
+    Array.isArray(reviews) && reviews.length > 0
+      ? reviews.reduce((sum, review) => sum + review.rating, 0) / reviews.length
+      : 0;
 
   return (
     <section id="reviews" className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
-            {t('reviews.title')}
+            {t("reviews.title")}
           </h2>
           <div className="w-24 h-1 bg-amber-600 mx-auto mb-6"></div>
           <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-            {t('reviews.subtitle')}
+            {t("reviews.subtitle")}
           </p>
-          
+
           <div className="flex justify-center items-center space-x-4 mb-8">
             <div className="flex items-center">
               <StarRating rating={Math.round(averageRating)} />
@@ -81,20 +87,29 @@ const Reviews = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {Array.isArray(reviews) && reviews.map((review, index) => (
-            <ReviewCard key={index} review={review} />
-          ))}
+          {Array.isArray(reviews) &&
+            reviews.map((review, index) => (
+              <ReviewCard key={index} review={review} />
+            ))}
         </div>
 
         <div className="text-center mt-12">
           <a
-            href="https://www.google.com/maps"
+            href="https://search.google.com/local/writereview?placeid=ChIJ14VyL-_8cQ0Rg_0a_nvhQx0"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center bg-amber-600 hover:bg-amber-700 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-300"
           >
-            <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
-              <path fillRule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" clipRule="evenodd" />
+            <svg
+              className="w-5 h-5 mr-2"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path
+                fillRule="evenodd"
+                d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"
+                clipRule="evenodd"
+              />
             </svg>
             Write a review
           </a>
